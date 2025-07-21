@@ -1,0 +1,2 @@
+/read /Users/adam/Code/testeranto-starter/testeranto/features/externalapi.github.com/repos/adamwong246/testeranto/issues/8
+/read /Users/adam/Code/testeranto-starter/testeranto/features/internal/src/Rectangle/README.md
