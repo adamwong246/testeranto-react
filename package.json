@@ -1,13 +1,13 @@
 {
   "name": "testeranto-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "testeranto + react, react-dom, and react-test-renderer",
   "repository": "git@github.com:adamwong246/testeranto-starter.git",
   "author": "adam wong <adamwong246@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.14.1",
-    "testeranto": "0.156.0",
+    "testeranto": "^0.160.0",
     "typescript": "^5.8.3"
   },
   "scripts": {
@@ -17,6 +17,8 @@
     "t-report": "tsx node_modules/testeranto/dist/prebuild/ReportServer.mjs"
   },
   "dependencies": {
+    "@types/chai": "^5.2.2",
+    "chai": "^5.2.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-test-renderer": "^19.1.0"

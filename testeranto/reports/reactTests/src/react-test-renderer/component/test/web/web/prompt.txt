@@ -1,0 +1,11 @@
+
+/add src/react-test-renderer/component/test/web.ts
+/add src/react-test-renderer/component/web.ts
+/add src/react-test-renderer/component/index.ts
+/add src/react-test-renderer/component/test/index.ts
+/add src/mocks/mockReactComponent.tsx
+
+/read testeranto/reports/reactTests/src/react-test-renderer/component/test/web/web/tests.json
+/read testeranto/reports/reactTests/src/react-test-renderer/component/test/web/web/logs.txt
+/read testeranto/reports/reactTests/src/react-test-renderer/component/test/web/web/type_errors.txt
+/read testeranto/reports/reactTests/src/react-test-renderer/component/test/web/web/lint_errors.txt

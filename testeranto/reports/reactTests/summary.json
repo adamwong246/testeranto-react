@@ -1,0 +1,22 @@
+{
+  "src/react-test-renderer/component/test/node.ts": {
+    "typeErrors": 38,
+    "staticErrors": 2,
+    "runTimeErrors": -1,
+    "prompt": "aider --model deepseek/deepseek-chat --load testeranto/reactTests/reports/node/src/react-test-renderer/component/test/node/prompt.txt",
+    "failingFeatures": {}
+  },
+  "src/react-test-renderer/component/test/web.ts": {
+    "typeErrors": 39,
+    "staticErrors": 2,
+    "runTimeErrors": -1,
+    "prompt": "aider --model deepseek/deepseek-chat --load testeranto/reactTests/reports/web/src/react-test-renderer/component/test/web/prompt.txt",
+    "failingFeatures": {}
+  },
+  "src/react-test-renderer/component/test/pure.ts": {
+    "typeErrors": 39,
+    "staticErrors": 2,
+    "prompt": "aider --model deepseek/deepseek-chat --load testeranto/reactTests/reports/pure/src/react-test-renderer/component/test/pure/prompt.txt",
+    "failingFeatures": {}
+  }
+}

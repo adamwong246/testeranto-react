@@ -1,0 +1,68 @@
+{
+  "name": "Testing ClassicalComponent",
+  "givens": [
+    {
+      "key": "initial state",
+      "name": "AnEmptyState",
+      "whens": [],
+      "thens": [
+        {
+          "name": "ThePropsIs: [object Object]",
+          "error": false
+        },
+        {
+          "name": "TheStatusIs: [object Object]",
+          "error": false
+        }
+      ],
+      "error": null,
+      "features": [
+        "Component should initialize with correct state"
+      ]
+    },
+    {
+      "key": "button click",
+      "name": "AnEmptyState",
+      "whens": [
+        {
+          "name": "IClickTheButton: "
+        }
+      ],
+      "thens": [
+        {
+          "name": "TheStatusIs: [object Object]",
+          "error": false
+        }
+      ],
+      "error": null,
+      "features": [
+        "Clicking button should increment count"
+      ]
+    },
+    {
+      "key": "header click",
+      "name": "AnEmptyState",
+      "whens": [
+        {
+          "name": "IClickTheHeader: "
+        }
+      ],
+      "thens": [
+        {
+          "name": "TheStatusIs: [object Object]",
+          "error": false
+        }
+      ],
+      "error": null,
+      "features": [
+        "Clicking header should not change state"
+      ]
+    }
+  ],
+  "fails": 0,
+  "features": [
+    "Component should initialize with correct state",
+    "Clicking button should increment count",
+    "Clicking header should not change state"
+  ]
+}

@@ -1,0 +1,62 @@
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/abstractBase.ts (21,3): Property 'error' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/abstractBase.ts (23,3): Property 'store' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/abstractBase.ts (24,3): Property 'recommendedFsPath' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/abstractBase.ts (27,3): Property 'key' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/abstractBase.ts (28,3): Property 'failed' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/abstractBase.ts (122,7): Type 'unknown' is not assignable to type 'Error'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/abstractBase.ts (154,12): 'e' is of type 'unknown'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/abstractBase.ts (167,9): Type 'unknown' is not assignable to type 'boolean'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/abstractBase.ts (180,3): Property 'error' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/basebuilder.ts (35,3): Property 'assertThis' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/basebuilder.ts (45,3): Property 'puppetMaster' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/basebuilder.ts (78,13): Argument of type '(fPath: string, value: string | Buffer | PassThrough) => any' is not assignable to parameter of type '(fPath: string, value: unknown) => void'.
+  Types of parameters 'value' and 'value' are incompatible.
+    Type 'unknown' is not assignable to type 'string | Buffer<ArrayBufferLike> | PassThrough'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/basebuilder.ts (79,15): This expression is not callable.
+  Not all constituents of type 'void | ((fPath: string, value: string | Buffer<ArrayBufferLike> | PassThrough) => void)' are callable.
+    Type 'void' has no call signatures.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/basebuilder.ts (135,29): Property 'artifacts' does not exist on type '{ test: BaseSuite<I, O>; toObj: () => { name: string; givens: { key: string; name: string; whens: {}[]; thens: { name: string; error: boolean; }[]; error: (string | Error | undefined)[] | null; failed: boolean; features: string[]; }[]; fails: number; failed: boolean; features: string[]; }; runner: (puppetMaster: IPM...'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/BaseSuite.ts (11,3): Property 'store' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/BaseSuite.ts (12,3): Property 'testResourceConfiguration' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/BaseSuite.ts (14,3): Property 'failed' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/classBuilder.ts (86,18): A spread argument must either have a tuple type or be passed to a rest parameter.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/classBuilder.ts (101,28): A spread argument must either have a tuple type or be passed to a rest parameter.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/core.ts (46,7): Argument of type 'Omit<{ suites: import("/Users/adam/Code/testeranto-react/node_modules/testeranto/src/Types").TestSuiteImplementation<O>; givens: import("/Users/adam/Code/testeranto-react/node_modules/testeranto/src/Types").TestGivenImplementation<I, O>; whens: import("/Users/adam/Code/testeranto-react/node_modules/testeranto/src/Ty...' is not assignable to parameter of type 'Omit<{ suites: import("/Users/adam/Code/testeranto-react/node_modules/testeranto/src/Types").TestSuiteImplementation<O>; givens: import("/Users/adam/Code/testeranto-react/node_modules/testeranto/src/Types").TestGivenImplementation<I, O>; whens: import("/Users/adam/Code/testeranto-react/node_modules/testeranto/src/Ty...'.
+  Type 'Omit<{ suites: TestSuiteImplementation<O>; givens: TestGivenImplementation<I, O>; whens: TestWhenImplementation<I, O>; thens: TestThenImplementation<...>; }, keyof M> & M & { ...; }' is not assignable to type '{ suites: Record<string, never>; givens: Record<string, any>; whens: Record<string, any>; thens: Record<string, any>; }'.
+    Types of property 'suites' are incompatible.
+      Type 'Record<string, any>' is not assignable to type 'Record<string, never>'.
+        'string' index signatures are incompatible.
+          Type 'any' is not assignable to type 'never'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/index.ts (16,3): Type '(subject: T["isubject"], initialValues: T["iinitialValues"], x: unknown, testResource: ITTestResourceConfiguration, pm: IPM) => Promise<T["isubject"]>' is not assignable to type '(subject: T["isubject"], initializer: (c?: any) => T["given"], testResource: ITTestResourceConfiguration, initialValues: any, pm: IPM) => Promise<...>'.
+  Types of parameters 'initialValues' and 'initializer' are incompatible.
+    Type '(c?: any) => T["given"]' is not assignable to type 'T["iinitialValues"]'.
+      'T["iinitialValues"]' could be instantiated with an arbitrary type which could be unrelated to '(c?: any) => T["given"]'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/index.ts (18,20): Type '"iinitialValues"' cannot be used to index type 'T'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/index.ts (27,3): Type '(store: T["istore"], thenCb: (s: T["iselection"]) => Promise<T["isubject"]>) => Promise<T["isubject"]>' is not assignable to type '(store: T["istore"], thenCB: T["then"], testResource: ITTestResourceConfiguration, pm: IPM) => Promise<T["iselection"]>'.
+  Types of parameters 'thenCb' and 'thenCB' are incompatible.
+    Type 'T["then"]' is not assignable to type '(s: T["iselection"]) => Promise<T["isubject"]>'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/index.ts (40,13): This expression is not callable.
+  Type 'unknown' has no call signatures.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/index.ts (52,3): Type '{ assertThis?: ((x: T["then"]) => any) | undefined; andWhen?: ((store: T["istore"], whenCB: T["when"], testResource: ITTestResourceConfiguration, pm: IPM) => Promise<T["istore"]>) | undefined; ... 4 more ...; beforeEach?: ((subject: T["isubject"], initializer: (c?: any) => T["given"], testResource: ITTestResourceCon...' is not assignable to type 'ITestAdapter<T>'.
+  Types of property 'assertThis' are incompatible.
+    Type '((x: T["then"]) => any) | undefined' is not assignable to type '(x: T["then"]) => any'.
+      Type 'undefined' is not assignable to type '(x: T["then"]) => any'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/lib/pmProxy.ts (21,7): Type '(pm: IPM, mappings: [IProxiedFunctions, (...x: any[]) => any][]) => IPM' is not assignable to type 'IProxyBase'.
+  Types of parameters 'mappings' and 'mappings' are incompatible.
+    Type '[string, (...x: any) => any][]' is not assignable to type '[IProxiedFunctions, (...x: any[]) => any][]'.
+      Type '[string, (...x: any) => any]' is not assignable to type '[IProxiedFunctions, (...x: any[]) => any]'.
+        Type at position 0 in source is not compatible with type at position 0 in target.
+          Type 'string' is not assignable to type 'IProxiedFunctions'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/Node.ts (34,7): Argument of type 'ITestImplementation<I, O, M>' is not assignable to parameter of type 'Omit<{ suites: TestSuiteImplementation<O>; givens: TestGivenImplementation<I, O>; whens: TestWhenImplementation<I, O>; thens: TestThenImplementation<...>; }, keyof M> & M & { ...; }'.
+  Type 'Omit<{ suites: TestSuiteImplementation<O>; givens: TestGivenImplementation<I, O>; whens: TestWhenImplementation<I, O>; thens: TestThenImplementation<...>; }, keyof M>' is missing the following properties from type '{ suites: Record<string, any>; givens: Record<string, any>; whens: Record<string, any>; thens: Record<string, any>; }': suites, givens, whens, thens
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/Node.ts (59,24): Cannot find name 'INodeAdapter'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/PM/index.ts (9,3): Property 'testResourceConfiguration' has no initializer and is not definitely assigned in the constructor.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/PM/web.ts (56,12): Cannot find name 'opts'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/PM/web.ts (57,57): Cannot find name 'opts'.
+/Users/adam/Code/testeranto-react/node_modules/testeranto/src/PM/web.ts (59,7): Cannot find name 'page'. Did you mean the instance member 'this.page'?
+/Users/adam/Code/testeranto-react/src/react-test-renderer/component/index.ts (5,14): Property 'beforeAll' is missing in type '{ assertThis: (x: unknown) => unknown; beforeEach: (CComponent: ReactTestRenderer, propsAndChildren: () => any) => Promise<ReactTestRenderer>; andWhen: (renderer: ReactTestRenderer, whenCB: any) => Promise<ReactTestRenderer>; butThen: (s: ReactTestRenderer, thenCB: unknown, tr: ITTestResourceConfiguration) => Promis...' but required in type 'ITestAdapter<I>'.
+/Users/adam/Code/testeranto-react/src/react-test-renderer/component/index.ts (24,12): 'thenCB' is of type 'unknown'.
+/Users/adam/Code/testeranto-react/src/react-test-renderer/component/test/index.ts (16,50): Cannot find name 'I'.
+/Users/adam/Code/testeranto-react/src/react-test-renderer/component/test/index.ts (67,3): Object literal may only specify known properties, and 'checks' does not exist in type 'Omit<{ suites: TestSuiteImplementation<O>; givens: TestGivenImplementation<I, O>; whens: TestWhenImplementation<I, O>; thens: TestThenImplementation<...>; }, never>'.
+/Users/adam/Code/testeranto-react/src/react-test-renderer/component/test/index.ts (84,48): Cannot find name 'I'.
+/Users/adam/Code/testeranto-react/src/react-test-renderer/component/test/node.ts (6,37): Cannot find name 'O'.

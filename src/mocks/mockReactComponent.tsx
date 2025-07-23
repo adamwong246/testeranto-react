@@ -3,7 +3,7 @@ import React from "react";
 export type IProps = { foo: string, children: [] };
 export type IState = { count: number };
 
-export class ClassicalComponent extends React.Component<IProps, IState> {
+export class MockComponent extends React.Component<IProps, IState> {
   constructor(props) {
 
     super(props);
@@ -30,4 +30,4 @@ export class ClassicalComponent extends React.Component<IProps, IState> {
   }
 }
 
-export default ClassicalComponent;
+export default MockComponent;

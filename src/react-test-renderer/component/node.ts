@@ -1,11 +1,12 @@
 import Testeranto from "testeranto/src/Node";
+import {
+  Ibdd_out,
+  ITestImplementation,
+  ITestSpecification,
+} from "testeranto/src/CoreTypes";
+import { I, IInput, adapter } from ".";
 
-import { ITestImplementation, ITestSpecification } from "testeranto/dist/types/src/CoreTypes";
-
-import { IInput, I } from "./index.js";
-import { testInterface } from "./interface.js";
-
-export default <O extends OT, IProps, IState, M = object >(
+export default <IProps, IState, O extends Ibdd_out, M = object>(
   testImplementations: ITestImplementation<I, O, M>,
   testSpecifications: ITestSpecification<I, O>,
   testInput: IInput<IProps, IState>
@@ -14,5 +15,5 @@ export default <O extends OT, IProps, IState, M = object >(
     testInput,
     testSpecifications,
     testImplementations,
-    testInterface
+    adapter
   );

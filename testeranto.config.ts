@@ -18,23 +18,23 @@ const config: IProject = {
 
       tests: [
         [
-          "./src/react-test-renderer/component/test/node.ts",
+          "src/react-test-renderer/component/test/node.ts",
           "node",
           { ports: 0 },
           [],
         ],
-        // [
-        //   "./src/SubPackages/react-test-renderer/component/test/web.ts",
-        //   "web",
-        //   { ports: 0 },
-        //   [],
-        // ],
-        // [
-        //   "./src/SubPackages/react-test-renderer/component/test/pure.ts",
-        //   "pure",
-        //   { ports: 0 },
-        //   [],
-        // ],
+        [
+          "src/react-test-renderer/component/test/web.ts",
+          "web",
+          { ports: 0 },
+          [],
+        ],
+        [
+          "src/react-test-renderer/component/test/pure.ts",
+          "pure",
+          { ports: 0 },
+          [],
+        ],
       ],
 
       webPlugins: [],

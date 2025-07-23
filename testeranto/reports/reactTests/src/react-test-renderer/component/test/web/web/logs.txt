@@ -1,0 +1,9 @@
+failure 4  JSHandle@error
+{"url":"file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/src/react-test-renderer/component/test/web.mjs?cacheBust=1753306888687","lineNumber":15425,"columnNumber":14}
+[{"url":"file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/src/react-test-renderer/component/test/web.mjs?cacheBust=1753306888687","lineNumber":15425,"columnNumber":14}]
+Given error 1: JSHandle@error
+{"url":"file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/src/react-test-renderer/component/test/web.mjs?cacheBust=1753306888687","lineNumber":15781,"columnNumber":16}
+[{"url":"file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/src/react-test-renderer/component/test/web.mjs?cacheBust=1753306888687","lineNumber":15781,"columnNumber":16}]
+fail JSHandle@error
+{"url":"pptr:evaluate;file%3A%2F%2F%2FUsers%2Fadam%2FCode%2Ftesteranto-react%2Fnode_modules%2Ftesteranto%2Fdist%2Fprebuild%2Frun.mjs%3A1345%3A20","lineNumber":7,"columnNumber":16}
+[{"url":"pptr:evaluate;file%3A%2F%2F%2FUsers%2Fadam%2FCode%2Ftesteranto-react%2Fnode_modules%2Ftesteranto%2Fdist%2Fprebuild%2Frun.mjs%3A1345%3A20","lineNumber":7,"columnNumber":16}]

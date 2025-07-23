@@ -1,14 +1,11 @@
 import test from "../pure";
 
-import { O } from "../../../../examples/react/component/test";
-import { IProps, IState } from "../../../../examples/react/component";
-import component from "../../../../examples/react/component/index";
-import { specification } from "../../../../examples/react/component/test";
+import { IProps, IState } from "../../../mocks/mockReactComponent";
 
-import { testImplementation } from "./implementation";
+import { implementation, O, specification, subject } from ".";
 
 export default test<O, IProps, IState>(
-  testImplementation,
+  implementation,
   specification,
-  component
+  subject
 );

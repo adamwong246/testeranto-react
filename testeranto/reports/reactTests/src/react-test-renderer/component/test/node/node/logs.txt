@@ -1,0 +1,25 @@
+stderr > Starting inspector on 127.0.0.1:9229 failed: address already in use
+stdout > receiveTestResourceConfig {"name":"src/react-test-renderer/component/test/node.ts","ports":[],"fs":"testeranto/reports/reactTests/src/react-test-renderer/component/test/node/node","browserWSEndpoint":"ws://127.0.0.1:3234/devtools/browser/0df1c9d7-48ff-4064-a49e-0239ba612242"}
+stderr > react-test-renderer is deprecated. See https://react.dev/warnings/react-test-renderer
+Given error 1: Error: Can't access .root on unmounted test renderer
+    at Object.get [as root] (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19233:21)
+    at Then.thenCB (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:20281:38)
+    at file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19608:29
+    at Object.butThen (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:20201:12)
+    at Then.butThen (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19925:36)
+    at Then.test (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19603:17)
+    at Given.give (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19529:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TesterantoCore.uberCatcher.run (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19847:20)
+    at async file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19651:19
+goodbye node with caught error Error: Can't access .root on unmounted test renderer
+    at Object.get [as root] (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19233:21)
+    at Then.thenCB (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:20281:38)
+    at file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19608:29
+    at Object.butThen (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:20201:12)
+    at Then.butThen (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19925:36)
+    at Then.test (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19603:17)
+    at Given.give (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19529:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TesterantoCore.uberCatcher.run (file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19847:20)
+    at async file:///Users/adam/Code/testeranto-react/testeranto/bundles/node/reactTests/src/react-test-renderer/component/test/node.mjs:19651:19

@@ -1,0 +1,5 @@
+TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.from (<anonymous>)
+    at <anonymous> (/Users/adam/Code/testeranto-react/node_modules/testeranto/dist/prebuild/run.mjs:794:36)
+    at <anonymous>
+    at PM_Main.launchPure (/Users/adam/Code/testeranto-react/node_modules/testeranto/dist/prebuild/run.mjs:771:9)
