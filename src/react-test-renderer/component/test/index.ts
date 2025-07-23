@@ -42,31 +42,22 @@ export const implementation: ITestImplementation<I, O, M> = {
     ThePropsIs: (expectation: IProps) => (component) => {
       const propsElement = component.root.findByProps({ id: "theProps" });
       const actualProps = JSON.parse(propsElement.props.children);
-      assert.deepEqual(
-        actualProps,
-        expectation,
-        `Expected props ${JSON.stringify(expectation)} but got ${
-          propsElement.props.children
-        }`
-      );
+      try {
+        assert.deepEqual(actualProps, expectation);
+      } catch (e) {
+        throw new Error(`Expected props ${JSON.stringify(expectation)} but got ${propsElement.props.children}`);
+      }
       return component;
     },
     TheStatusIs: (expectation: IState) => (component) => {
       const stateElement = component.root.findByProps({ id: "theStat" });
       const actualState = JSON.parse(stateElement.props.children);
-      assert.deepEqual(
-        actualState,
-        expectation,
-        `Expected state ${JSON.stringify(expectation)} but got ${
-          stateElement.props.children
-        }`
-      );
+      try {
+        assert.deepEqual(actualState, expectation);
+      } catch (e) {
+        throw new Error(`Expected state ${JSON.stringify(expectation)} but got ${stateElement.props.children}`);
+      }
       return component;
-    },
-  },
-  checks: {
-    AnEmptyState: (): IProps => {
-      return { foo: "bar", children: [] };
     },
   },
 };

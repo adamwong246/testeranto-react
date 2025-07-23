@@ -67,7 +67,6 @@
 /Users/adam/Code/testeranto-react/src/react-test-renderer/component/index.ts (5,14): Property 'beforeAll' is missing in type '{ assertThis: (x: unknown) => unknown; beforeEach: (CComponent: ReactTestRenderer, propsAndChildren: () => any) => Promise<ReactTestRenderer>; andWhen: (renderer: ReactTestRenderer, whenCB: any) => Promise<ReactTestRenderer>; butThen: (s: ReactTestRenderer, thenCB: unknown, tr: ITTestResourceConfiguration) => Promis...' but required in type 'ITestAdapter<I>'.
 /Users/adam/Code/testeranto-react/src/react-test-renderer/component/index.ts (24,12): 'thenCB' is of type 'unknown'.
 /Users/adam/Code/testeranto-react/src/react-test-renderer/component/test/index.ts (16,50): Cannot find name 'I'.
-/Users/adam/Code/testeranto-react/src/react-test-renderer/component/test/index.ts (67,3): Object literal may only specify known properties, and 'checks' does not exist in type 'Omit<{ suites: TestSuiteImplementation<O>; givens: TestGivenImplementation<I, O>; whens: TestWhenImplementation<I, O>; thens: TestThenImplementation<...>; }, never>'.
-/Users/adam/Code/testeranto-react/src/react-test-renderer/component/test/index.ts (84,48): Cannot find name 'I'.
+/Users/adam/Code/testeranto-react/src/react-test-renderer/component/test/index.ts (75,48): Cannot find name 'I'.
 /Users/adam/Code/testeranto-react/src/react-test-renderer/component/test/pure.ts (7,32): Type 'IState' does not satisfy the constraint 'Ibdd_out'.
   Type 'IState' is missing the following properties from type 'Ibdd_out': suites, givens, whens, thens
