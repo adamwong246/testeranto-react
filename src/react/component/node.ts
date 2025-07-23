@@ -1,4 +1,4 @@
-import Testeranto from "../../../Node.js";
+import Testeranto from "testeranto/src/Node";
 import { ITestImplementation, ITestSpecification, OT } from "../../../Types";
 
 import { reactInterfacer, I } from "./index.js";

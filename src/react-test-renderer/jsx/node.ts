@@ -1,4 +1,4 @@
-import test from "../../../Node.js";
+import test from "testeranto/src/Node";
 import {
   Ibdd_out,
   ITestImplementation,

@@ -1,7 +1,7 @@
 import React from "react";
 import renderer, { act } from "react-test-renderer";
 
-import test from "../../../Node.js";
+import test from "testeranto/src/Node";
 
 import {
   ITestSpecification,

@@ -1,23 +1,8 @@
-Fork this repo to get started with testeranto. 
+`react-testeranto` is a helper library that assists in testing react components. It's purpose is to integrate your testeranto test with the `react`, `react-dom`, and `react-test-renderer`.
 
-## scripts
+While more combinations are possible, the most likely pattern will be:
 
-```
-// create the output folders
-yarn t-init
+1) test you react component with react-dom, in the browser
+2) test your react component with react-test-renderer, in the browser.
+3) snapshot test your react component with react-dom, on the server.
 
-// Build the test bundles once
-yarn t-build rectangle once
-
-// Build the rectangle bundles continuously
-yarn t-build rectangle dev
-
-// Run the rectangle test once
-yarn t-run rectangle once
-
-// Run the rectangle test continuously
-yarn t-run rectangle dev
-
-// Starts the report server. 
-yarn t-report
-```

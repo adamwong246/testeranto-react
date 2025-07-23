@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactTestRenderer } from "react-test-renderer";
 
-import type { Ibdd_in } from "../../../Types";
+import type { Ibdd_in } from "testeranto/dist/types/src/C";
 
 export type IInput<P, S> = typeof React.Component<P, S>;
 

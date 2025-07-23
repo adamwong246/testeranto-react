@@ -1,0 +1,20 @@
+{
+  "errors": [
+    {
+      "id": "",
+      "location": {
+        "column": 30,
+        "file": "src/react-test-renderer/component/test/node.ts",
+        "length": 43,
+        "line": 6,
+        "lineText": "import { specification } from \"../../../../examples/react/component/test\";",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [],
+      "pluginName": "",
+      "text": "Could not resolve \"../../../../examples/react/component/test\""
+    }
+  ],
+  "warnings": []
+}

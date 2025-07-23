@@ -1,7 +1,7 @@
 import React from "react";
 import renderer, { act } from "react-test-renderer";
 
-import { IPartialInterface } from "../../../Types";
+// import { IPartialInterface } from "../../../Types";
 
 import { I } from ".";
 
