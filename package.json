@@ -1,25 +1,32 @@
 {
   "name": "testeranto-react",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "testeranto + react, react-dom, and react-test-renderer",
-  "repository": "git@github.com:adamwong246/testeranto-starter.git",
+  "repository": "git@github.com:adamwong246/testeranto-react.git",
   "author": "adam wong <adamwong246@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "@types/react": "18.2.55",
-    "@types/react-dom": "18.2.23",
-    "@types/react-test-renderer": "18.0.7",
-    "@testing-library/react": "^13.4.0",
-    "@types/node": "^22.14.1",
-    "testeranto": "0.171.0",
-    "typescript": "^5.8.3"
-  },
+
   "scripts": {
     "t-init": "tsx node_modules/testeranto/dist/prebuild/init-docs.mjs",
     "t-build": "tsx node_modules/testeranto/dist/prebuild/build.mjs",
     "t-run": "tsx node_modules/testeranto/dist/prebuild/run.mjs",
     "t-report": "tsx node_modules/testeranto/dist/prebuild/ReportServer.mjs"
   },
+
+  "peerDependencies": {
+    "testeranto": "0.171.0"
+  },
+  
+
+  "devDependencies": {
+    "@types/react": "18.2.55",
+    "@types/react-dom": "18.2.23",
+    "@types/react-test-renderer": "18.0.7",
+    "@testing-library/react": "^13.4.0",
+    "@types/node": "^22.14.1",
+    "typescript": "^5.8.3"
+  },
+  
   "dependencies": {
     "@types/chai": "^5.2.2",
     "chai": "^5.2.1",
