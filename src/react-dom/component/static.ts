@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { ReactNode, createElement } from "react";
 
-import { Ibdd_in } from "../../../Types";
+import { Ibdd_in } from "testeranto/src/CoreTypes";
 
 type IInput = typeof React.Component;
 

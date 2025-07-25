@@ -1,7 +1,9 @@
-import test from "../node";
-import { IProps, IState } from "../../../mocks/mockReactComponent";
+import { IProps, IState, O, specification, subject } from "../../../mocks/mockReactComponent";
 
-import { subject, implementation, specification } from ".";
+import test from "../node";
+
+
+import { implementation } from ".";
 
 export default test<IProps, IState, O>(
   implementation,

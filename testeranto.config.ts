@@ -35,6 +35,13 @@ const config: IProject = {
           { ports: 0 },
           [],
         ],
+
+        [
+          "src/react-dom/component/test/web.ts",
+          "web",
+          { ports: 0 },
+          [],
+        ],
       ],
 
       webPlugins: [],

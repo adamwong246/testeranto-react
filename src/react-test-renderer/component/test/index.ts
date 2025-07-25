@@ -1,15 +1,17 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import {
-  Ibdd_out,
   ITestImplementation,
-  ITestSpecification,
 } from "testeranto/src/CoreTypes";
-import { act } from "react-test-renderer";
 
 import assert from "assert";
-import MockComponent, {
+import {
   IProps,
   IState,
+  O,
 } from "../../../mocks/mockReactComponent";
+import { I } from "../../../react/component";
+import { act } from 'react-test-renderer';
 
 type M = {};
 
@@ -24,80 +26,115 @@ export const implementation: ITestImplementation<I, O, M> = {
   },
   whens: {
     IClickTheButton: () => async (component) => {
-      const button = component.root.findByProps({ id: "theButton" });
-      await button.props.onClick();
-      return component;
+      try {
+        if (!component || !component.root) {
+          throw new Error('Component is not mounted or has no root element');
+        }
+
+        // Debug logging removed for production
+        
+        const button = component.root.findByProps({ id: "theButton" });
+        if (!button) {
+          const buttons = component.root.findAllByType('button');
+          console.error('[ERROR] Could not find button with id "theButton". Available buttons:', buttons);
+          throw new Error(`Button not found. Available button IDs: ${
+            buttons.map(b => b.props.id).filter(Boolean).join(', ') || 'none'}`);
+        }
+        if (!button.props.onClick) {
+          console.error('Button props:', button.props);
+          throw new Error('Button has no onClick handler');
+        }
+        
+        await act(async () => {
+          try {
+            button.props.onClick();
+          } catch (e) {
+            console.error('Click handler error:', e);
+            throw e;
+          }
+        });
+        
+        // if (DEBUG) {
+        //   console.log('After click:', component.toJSON());
+        //   console.log('Updated state:', component.root.findByProps({ id: "theStat" })?.props.children);
+        // }
+        return component;
+      } catch (error) {
+        console.error('Error in IClickTheButton:', error);
+        throw error;
+      }
     },
     IClickTheHeader: () => async (component) => {
       try {
         const header = component.root.findByProps({ id: "theHeader" });
-        await header.props.onClick();
+        await act(async () => {
+          try {
+            if (header.props.onClick) {
+              await header.props.onClick();
+            }
+          } catch (error) {
+            // Expected error - header is not clickable
+          }
+        });
+        return component;
       } catch (error) {
-        // Expected error - header is not clickable
+        console.error('Error in IClickTheHeader:', error);
+        throw error;
       }
-      return component;
     },
   },
   thens: {
     ThePropsIs: (expectation: IProps) => (component) => {
-      const propsElement = component.root.findByProps({ id: "theProps" });
-      const actualProps = JSON.parse(propsElement.props.children);
       try {
-        assert.deepEqual(actualProps, expectation);
+        if (!component || !component.root) {
+          console.error('Component state:', component);
+          throw new Error('Component not mounted or invalid');
+        }
+        
+        const propsElement = component.root.findByProps({ id: "theProps" });
+        if (!propsElement) {
+          console.error('Available props:', component.root.findAllByType('pre'));
+          throw new Error('Could not find props element with id "theProps"');
+        }
+        
+        const propsText = propsElement.props.children;
+        if (!propsText) {
+          console.error('Props element:', propsElement);
+          throw new Error('Props element has no children');
+        }
+        
+        const actualProps = JSON.parse(propsText);
+        // if (DEBUG) {
+        //   console.log('Props comparison:', {
+        //     actual: actualProps,
+        //     expected: expectation
+        //   });
+        // }
+        assert.deepStrictEqual(actualProps, expectation);
+        return component;
       } catch (e) {
-        throw new Error(`Expected props ${JSON.stringify(expectation)} but got ${propsElement.props.children}`);
+        console.error('Props assertion failed:', e);
+        throw new Error(`Props assertion failed: ${e.message}`);
       }
-      return component;
     },
     TheStatusIs: (expectation: IState) => (component) => {
-      const stateElement = component.root.findByProps({ id: "theStat" });
-      const actualState = JSON.parse(stateElement.props.children);
       try {
+        if (!component || !component.root) {
+          throw new Error('Component is not mounted or has no root element');
+        }
+
+        const stateElement = component.root.findByProps({ id: "theStat" });
+        if (!stateElement) {
+          throw new Error('Could not find state element with id "theStat"');
+        }
+
+        const actualState = JSON.parse(stateElement.props.children);
         assert.deepEqual(actualState, expectation);
+        return component;
       } catch (e) {
-        throw new Error(`Expected state ${JSON.stringify(expectation)} but got ${stateElement.props.children}`);
+        console.error('State assertion failed:', e);
+        throw new Error(`State assertion failed: ${e.message}`);
       }
-      return component;
     },
   },
 };
-
-export type O = Ibdd_out<
-  { Default: [string] }, // suites
-  { AnEmptyState: [] }, // givens
-  { IClickTheButton: []; IClickTheHeader: [] }, // whens
-  {
-    ThePropsIs: [any];
-    TheStatusIs: [any];
-  }
->;
-
-export const specification: ITestSpecification<I, O> = (
-  Suite,
-  Given,
-  When,
-  Then
-) => [
-  Suite.Default("Testing ClassicalComponent", {
-    "initial state": Given.AnEmptyState(
-      ["Component should initialize with correct state"],
-      [],
-      [
-        Then.ThePropsIs({ foo: "bar", children: [] }),
-        Then.TheStatusIs({ count: 0 }),
-      ]
-    ),
-    "button click": Given.AnEmptyState(
-      ["Clicking button should increment count"],
-      [When.IClickTheButton()],
-      [Then.TheStatusIs({ count: 1 })]
-    ),
-    "header click": Given.AnEmptyState(
-      ["Clicking header should not change state"],
-      [When.IClickTheHeader()],
-      [Then.TheStatusIs({ count: 0 })]
-    ),
-  }),
-];
-
-export const subject = MockComponent;

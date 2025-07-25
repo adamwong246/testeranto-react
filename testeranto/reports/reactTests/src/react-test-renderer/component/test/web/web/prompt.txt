@@ -3,7 +3,11 @@
 /add src/react-test-renderer/component/web.ts
 /add src/react-test-renderer/component/index.ts
 /add src/react-test-renderer/component/test/index.ts
-/add src/mocks/mockReactComponent.tsx
+
+/read node_modules/testeranto/docs/index.md
+/read node_modules/testeranto/docs/style.md
+/read node_modules/testeranto/docs/testing.ai.txt
+/read node_modules/testeranto/src/CoreTypes.ts
 
 /read testeranto/reports/reactTests/src/react-test-renderer/component/test/web/web/tests.json
 /read testeranto/reports/reactTests/src/react-test-renderer/component/test/web/web/logs.txt

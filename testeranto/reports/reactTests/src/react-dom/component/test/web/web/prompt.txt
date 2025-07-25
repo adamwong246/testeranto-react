@@ -1,0 +1,16 @@
+
+/add src/react-dom/component/test/web.ts
+/add src/react-dom/component/web.ts
+/add src/react-dom/component/dynamic.ts
+/add src/react-dom/component/test/index.ts
+/add src/react-dom/component/test/implementation.ts
+
+/read node_modules/testeranto/docs/index.md
+/read node_modules/testeranto/docs/style.md
+/read node_modules/testeranto/docs/testing.ai.txt
+/read node_modules/testeranto/src/CoreTypes.ts
+
+/read testeranto/reports/reactTests/src/react-dom/component/test/web/web/tests.json
+/read testeranto/reports/reactTests/src/react-dom/component/test/web/web/logs.txt
+/read testeranto/reports/reactTests/src/react-dom/component/test/web/web/type_errors.txt
+/read testeranto/reports/reactTests/src/react-dom/component/test/web/web/lint_errors.txt

@@ -6,8 +6,12 @@
   "author": "adam wong <adamwong246@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/react": "18.2.55",
+    "@types/react-dom": "18.2.23",
+    "@types/react-test-renderer": "18.0.7",
+    "@testing-library/react": "^13.4.0",
     "@types/node": "^22.14.1",
-    "testeranto": "^0.160.0",
+    "testeranto": "0.166.0",
     "typescript": "^5.8.3"
   },
   "scripts": {
@@ -19,8 +23,8 @@
   "dependencies": {
     "@types/chai": "^5.2.2",
     "chai": "^5.2.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-test-renderer": "^19.1.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-test-renderer": "18.2.0"
   }
 }

@@ -1,9 +1,24 @@
 
+/add ../testeranto/src/lib/index.ts
+/add ../testeranto/src/lib/pmProxy.ts
+/add ../testeranto/src/lib/abstractBase.ts
+/add ../testeranto/src/lib/basebuilder.ts
+/add ../testeranto/src/lib/classBuilder.ts
+/add ../testeranto/src/lib/BaseSuite.ts
+/add ../testeranto/src/lib/core.ts
+/add ../testeranto/src/PM/index.ts
+/add ../testeranto/src/PM/pure.ts
+/add ../testeranto/src/Pure.ts
 /add src/react-test-renderer/component/index.ts
 /add src/react-test-renderer/component/pure.ts
-/add src/react-test-renderer/component/test/index.ts
 /add src/mocks/mockReactComponent.tsx
+/add src/react-test-renderer/component/test/index.ts
 /add src/react-test-renderer/component/test/pure.ts
+
+/read node_modules/testeranto/docs/index.md
+/read node_modules/testeranto/docs/style.md
+/read node_modules/testeranto/docs/testing.ai.txt
+/read node_modules/testeranto/src/CoreTypes.ts
 
 /read testeranto/reports/reactTests/src/react-test-renderer/component/test/pure/pure/tests.json
 /read testeranto/reports/reactTests/src/react-test-renderer/component/test/pure/pure/logs.txt

@@ -1,0 +1,28 @@
+{
+  "name": "Testing ClassicalComponent",
+  "givens": [
+    {
+      "key": "initial-state",
+      "name": "AnEmptyState",
+      "whens": [],
+      "thens": [
+        {
+          "name": "ThePropsIs: [object Object]",
+          "error": "AssertionError [ERR_ASSERTION]: Expected values to be loosely deep-equal:\n\n{ children: [] }\n\nshould equal\n\n{ foo: 'bar', children: [] }",
+          "artifacts": [
+            "suite-0/given-initial-state/then-0/butThen/pleaseWork.png"
+          ]
+        }
+      ],
+      "error": null,
+      "features": [
+        "Component should initialize with correct state"
+      ],
+      "artifacts": []
+    }
+  ],
+  "fails": 0,
+  "features": [
+    "Component should initialize with correct state"
+  ]
+}

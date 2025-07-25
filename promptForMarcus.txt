@@ -1,0 +1,10 @@
+/read node_modules/testeranto/README.md
+/read node_modules/testeranto/docs/index.md
+/read node_modules/testeranto/src/CoreTypes.ts
+
+/add src/mocks src/react-test-renderer src/react-dom
+
+Create testeranto test for `src/react-dom/component/test/web.ts`. 
+pattern after `src/react-test-renderer`.  
+observe https://raw.githubusercontent.com/ChromaPDX/kokomoBay/refs/heads/master/src/ClassicalComponent/react-dom/index.tsx to know how it will be rendered. 
+Emphasis: `src/react-dom/component/test/web.ts` should share specification and Outer BDD shape with existing tests. Put this shared code in a logical place.

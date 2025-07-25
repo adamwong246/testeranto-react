@@ -1,0 +1,20 @@
+{
+  "errors": [
+    {
+      "id": "",
+      "location": {
+        "column": 6,
+        "file": "../testeranto/src/lib/abstractBase.ts",
+        "length": 1,
+        "line": 234,
+        "lineText": "      );",
+        "namespace": "",
+        "suggestion": ""
+      },
+      "notes": [],
+      "pluginName": "",
+      "text": "Unexpected \")\""
+    }
+  ],
+  "warnings": []
+}

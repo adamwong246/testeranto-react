@@ -1,10 +1,10 @@
 import test from "../web";
 
-import { IProps, IState } from "../../../mocks/mockReactComponent";
+import { IProps, IState, O, specification, subject } from "../../../mocks/mockReactComponent";
 
-import { implementation, O, specification, subject } from ".";
+import { implementation} from ".";
 
-export default test<O, IProps, IState>(
+export default test<IProps, IState, O>(
   implementation,
   specification,
   subject

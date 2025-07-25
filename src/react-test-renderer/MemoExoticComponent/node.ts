@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import renderer, { act } from "react-test-renderer";
 
@@ -6,8 +8,8 @@ import {
   Ibdd_out,
   ITestImplementation,
   ITestSpecification,
-} from "../../../Types";
-import test from "../../../Node";
+} from "testeranto/src/CoreTypes";
+import test from "testeranto/src/Node";
 
 type IInput = React.MemoExoticComponent<() => JSX.Element>;
 
@@ -25,7 +27,6 @@ export default <
     Record<string, any>,
     Record<string, any>,
     Record<string, any>,
-    Record<string, any>,
     Record<string, any>
   >
 >(
@@ -33,7 +34,7 @@ export default <
   testSpecifications: ITestSpecification<I, O>,
   testInput: IInput
 ) =>
-  test<I, O>(testInput, testSpecifications, testImplementations, {
+  test<I, O, {}>(testInput, testSpecifications, testImplementations, {
     beforeEach: function (
       CComponent,
       props
