@@ -1,24 +1,15 @@
-stderr > Starting inspector on 127.0.0.1:9229 failed: address already in use
-stdout > [DEBUG] BaseSuite constructor - name: Testing ClassicalComponent index: 0
-[DEBUG] BaseSuite initialized: Testing ClassicalComponent 0
-[DEBUG] BaseSuite givens: initial-state
-receiveTestResourceConfig {"name":"src/react-test-renderer/component/test/node.ts","ports":[],"fs":"testeranto/reports/reactTests/src/react-test-renderer/component/test/node/node","browserWSEndpoint":"ws://127.0.0.1:3234/devtools/browser/b2bf4b8e-94a5-49ca-8842-07148a1629d4"}
-[Given] Setting currentStep for beforeEach: AnEmptyState
-[DEBUG] With props: { foo: 'bar', children: [] }
+stdout > receiveTestResourceConfig {"name":"src/react-test-renderer/component/test/node.ts","ports":[],"fs":"testeranto/reports/reactTests/src/react-test-renderer/component/test/node/node","browserWSEndpoint":"ws://127.0.0.1:3234/devtools/browser/78e9919c-1276-4b86-8749-3e5f114fba91"}
+mark14
+mark17
+mark800
 mark3 {"key":null,"ref":null,"props":{"foo":"bar","children":[]},"_owner":null,"_store":{}}
-[DEBUG] Component mounted successfully: {
-  rootType: [class MockComponent extends Component],
-  children: [ ReactTestInstance2 { _fiber: [FiberNode] } ]
-}
-[Then] Setting currentStep for butThen: ThePropsIs: [object Object]
-[DEBUG] Before Then step: {
-  rootExists: true,
-  tree: {
-    type: 'div',
-    props: { style: [Object] },
-    children: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
-  }
-}
-stdout > [DEBUG] Features extracted: Component should initialize with correct state
-stdout > [DEBUG] Features extracted: Component should initialize with correct state
+mark800
+mark3 {"key":null,"ref":null,"props":{"foo":"bar","children":[]},"_owner":null,"_store":{}}
+mark800
+mark3 {"key":null,"ref":null,"props":{"foo":"bar","children":[]},"_owner":null,"_store":{}}
+mark18
+mark15
+stdout > [TOOBJ] Serializing When with artifacts: []
+[TOOBJ] Serializing When with artifacts: []
+stdout > mark13
 stderr > goodbye node with failures 0

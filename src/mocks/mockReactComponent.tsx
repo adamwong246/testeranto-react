@@ -19,7 +19,7 @@ export class MockComponent extends React.Component<IProps, IState> {
   render() {
     return (
       <div style={{ border: '3px solid black' }}>
-        <h1 id="theHeader">Hello Marcus</h1>
+        <h1 id="theHeader">Hello World</h1>
         <pre id="theProps">{JSON.stringify(this.props)}</pre>
         <p>foo: {this.props.foo}</p>
         <pre id="theStat">{JSON.stringify(this.state)}</pre>
@@ -56,24 +56,28 @@ export const specification: ITestSpecification<I, O> = (
   Then
 ) => [
   Suite.Default("Testing ClassicalComponent", {
-    "initial-state": Given.AnEmptyState(  // Changed from "initial state" to "initial-state"
-      ["Component should initialize with correct state"],
+    "initial-state": Given.AnEmptyState( 
+      ["Component should initialize with status count zero and some props"],
       [],
       [
         Then.ThePropsIs({ foo: "bar", children: [] }),
-        // Then.TheStatusIs({ count: 0 }),
+        Then.TheStatusIs({ count: 0 }),
       ]
     ),
-    // "button-click": Given.AnEmptyState(  // Changed from "button click"
-    //   ["Clicking button should increment count"],
-    //   [When.IClickTheButton()],
-    //   [Then.TheStatusIs({ count: 1 })]
-    // ),
-    // "header-click": Given.AnEmptyState(  // Changed from "header click"
-    //   ["Clicking header should not change state"],
-    //   [When.IClickTheHeader()],
-    //   [Then.TheStatusIs({ count: 0 })]
-    // ),
+    "button-click": Given.AnEmptyState(  
+      ["Clicking button should increment count"],
+      [
+        When.IClickTheButton()
+      ],
+      [
+        Then.TheStatusIs({ count: 1 })
+      ]
+    ),
+    "header-click": Given.AnEmptyState( 
+      ["Clicking header should not change state"],
+      [When.IClickTheHeader()],
+      [Then.TheStatusIs({ count: 0 })]
+    ),
   }),
 ];
 

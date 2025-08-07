@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from "react";
-// import {render} from "react-dom/client"
+
 import ReactDom from "react-dom/client";
 
 import { Ibdd_in, ITestAdapter } from "testeranto/src/CoreTypes";
-// import { act } from "react";
 
 export type IInput = typeof React.Component;
 
@@ -31,10 +30,8 @@ export type I = Ibdd_in<
   (s: IStore) => IStore
 >;
 
-export const adapter: (
-  testInput: IInput
-) => ITestAdapter<I> = (testInput) => {
-
+export const adapter: (testInput: IInput) => ITestAdapter<I> = (testInput) => {
+  
   class TesterantoComponent extends React.Component {
     done: (t: TesterantoComponent) => void;
     constructor(props) {
@@ -53,21 +50,21 @@ export const adapter: (
 
   return {
     beforeAll: async (subject, artificer) => {
-      console.log('beforeAll - setting up test environment');
+      console.log("BEFORE ALL");
+      // debugger
       try {
         let htmlElement = document.getElementById("root");
         if (!htmlElement) {
-          htmlElement = document.createElement('div');
-          htmlElement.id = 'root';
+          htmlElement = document.createElement("div");
+          htmlElement.id = "root";
           document.body.appendChild(htmlElement);
-          console.log('Created root element');
+          console.log("Created root element");
         }
+
         
-        const domRoot = ReactDom.createRoot(htmlElement);
-        console.log('Created React root');
-        return { domRoot, htmlElement };
+        return { htmlElement };
       } catch (err) {
-        console.error('beforeAll failed:', err);
+        console.error("beforeAll failed:", err);
         throw err;
       }
     },
@@ -78,18 +75,23 @@ export const adapter: (
       initialValues,
       pm
     ) => {
-      const { domRoot, htmlElement } = subject;
-      console.log('beforeEach - initializing with:', {initialValues, subject});
-      console.log('beforeEach - initializing test with values:', initialValues);
-      try {
-        return await new Promise((resolve, rej) => {
+      console.log("BEFORE EACH");
+      const { htmlElement } = subject;
+
+      const domRoot = ReactDom.createRoot(htmlElement);
+      console.log("Created React root");
+      
+      return new Promise((resolve, rej) => {
+        try {
+          const initValues = initializer();
+          
           const element = React.createElement(
             TesterantoComponent,
             {
-              ...initialValues,
+              ...initValues,
               subject: testInput,
               done: (reactElement) => {
-                console.log('Component mounted successfully');
+                console.log("Component mounted successfully");
                 resolve({
                   htmlElement,
                   reactElement,
@@ -99,51 +101,57 @@ export const adapter: (
             },
             []
           );
-          
-          console.log('Rendering test component...');
+
           domRoot.render(element);
-        });
-      } catch (err) {
-        console.error('beforeEach failed:', JSON.stringify(err));
-        throw err;
-      }
+        } catch (err) {
+          rej(err);
+        }
+      });
     },
-    andWhen: async function (s, whenCB) {
-      console.log("andWhen")
-      return whenCB(s);
+    andWhen: async function (s, whenCB, tr, pm) {
+      console.log("andWhen");
+      return whenCB(s,
+        tr, pm
+      );
     },
     butThen: async function (s, thenCB) {
-      console.log("butThen")
+      console.log("butThen");
       return thenCB(s);
     },
     afterEach: async function (store, ndx, utils) {
-      console.log("afterEach")
-      try {
-        // if (store?.domRoot) {
-        //   await act(() => {
-        //     store.domRoot.unmount();
-        //   });
-        // }
-        return store;
-      } catch (err) {
-        console.error('Error in afterEach:', err.toString());
-        return store;
-      }
+      console.log("afterEach");
+      // debugger
+      store.domRoot.unmount();
+      // ReactDom.unmountComponentAtNode(document.getElementById('root'));
+      // ReactDom.
+
+      // try {
+      //   // if (store?.domRoot) {
+      //   //   await act(() => {
+      //   //     store.domRoot.unmount();
+      //   //   });
+      //   // }
+      //   return store;
+      // } catch (err) {
+      //   console.error("Error in afterEach:", err.toString());
+      //   return store;
+      // }
+      return store;
     },
 
     afterAll: async (store, utils) => {
-      console.log("afterAll")
+      console.log("afterAll");
       if (store?.htmlElement) {
         store.htmlElement.remove();
       }
-      
+      // debugger
       return store;
     },
     assertThis: (x) => {
-      if (x instanceof Error) {
-        throw x;
-      }
+      // if (x instanceof Error) {
+      //   throw x;
+      // }
       return x;
-    }
+    },
   };
 };

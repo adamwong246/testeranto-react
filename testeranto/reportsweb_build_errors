@@ -3,17 +3,17 @@
     {
       "id": "",
       "location": {
-        "column": 6,
-        "file": "../testeranto/src/lib/abstractBase.ts",
+        "column": 7,
+        "file": "src/react-dom/component/dynamic.ts",
         "length": 1,
-        "line": 234,
-        "lineText": "      );",
+        "line": 118,
+        "lineText": "      });",
         "namespace": "",
-        "suggestion": ""
+        "suggestion": "}"
       },
       "notes": [],
       "pluginName": "",
-      "text": "Unexpected \")\""
+      "text": "Expected \"}\" but found \")\""
     }
   ],
   "warnings": []

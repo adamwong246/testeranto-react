@@ -8,17 +8,26 @@ export const implementation: ITestImplementation<I, O> = {
     Default: "Classical Component, react-dom, client.web",
   },
   givens: {
-    AnEmptyState: { props: { foo: "bar" } },
+    AnEmptyState: () => ({ 
+      props: { foo: "bar" },
+      state: { count: 0 } // Initial state should be 0 since button increments it
+    }),
   },
   whens: {
     IClickTheHeader:
       () =>
-      async ({ htmlElement }) => {
+      async ({ htmlElement }, tr, pm) => {
+        // debugger
+        const p = await pm.page();
+        await pm.customScreenShot({ path: "IClickTheHeader.png" }, p);
         htmlElement.querySelector("#theHeader").click();
       },
     IClickTheButton:
       () =>
-      async ({ htmlElement }) => {
+      async ({ htmlElement }, tr, pm) => {
+        // debugger
+        const p = await pm.page();
+        await pm.customScreenShot({ path: "IClickTheButton.png" }, p);
         htmlElement.querySelector("#theButton").click();
       },
   },
@@ -26,22 +35,50 @@ export const implementation: ITestImplementation<I, O> = {
     ThePropsIs:
       (expectation) =>
       async ({ htmlElement, reactElement }, pm) => {
-        const elem = htmlElement.querySelector("#theProps");
-        const found = elem.innerHTML;
+        try {
+          const p = await pm.page();
+          await pm.customScreenShot({ path: "props.png" }, p);
 
-        const p = await pm.page();
-        console.log("mark6", p);
-        await pm.customScreenShot({ path: "pleaseWork.png" }, p);
+          const elem = htmlElement.querySelector("#theProps");
+          if (!elem) throw new Error("#theProps element not found");
 
-        assert.deepEqual(JSON.parse(found), expectation);
+          const found = elem.innerHTML;
+          console.log("Props content:", found);
+
+          const parsed = JSON.parse(found);
+          console.log("Parsed props:", parsed);
+
+          // Extract just the props from the component's output
+          const actualProps = parsed.props || parsed;
+          assert.deepEqual(actualProps, expectation);
+        } catch (err) {
+          console.error("Props assertion failed:", err.toString());
+          throw err;
+        }
       },
 
     TheStatusIs:
       (expectation) =>
-      async ({ htmlElement }) => {
-        const elem = htmlElement.querySelector("#theStat");
-        const found = elem.innerHTML;
-        assert.deepEqual(found, JSON.stringify(expectation));
+      async ({ htmlElement }, pm) => {
+        try {
+          const p = await pm.page();
+          await pm.customScreenShot({ path: "status.png" }, p);
+
+          const elem = htmlElement.querySelector("#theStat");
+          if (!elem) throw new Error("#theStat element not found");
+
+          const found = elem.innerHTML;
+          console.log("Status content:", found);
+
+          const parsed = JSON.parse(found);
+          console.log("Parsed status:", parsed);
+
+          // Compare the actual state object
+          assert.deepEqual(parsed, expectation);
+        } catch (err) {
+          console.error("Status assertion failed:", err.toString());
+          throw err;
+        }
       },
   },
   checks: {

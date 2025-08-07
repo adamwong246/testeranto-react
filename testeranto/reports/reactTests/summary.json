@@ -1,27 +1,27 @@
 {
   "src/react-test-renderer/component/test/node.ts": {
-    "typeErrors": 47,
+    "typeErrors": 44,
     "staticErrors": 0,
     "runTimeErrors": 0,
     "prompt": "aider --model deepseek/deepseek-chat --load testeranto/reactTests/reports/node/src/react-test-renderer/component/test/node/prompt.txt",
     "failingFeatures": {}
   },
   "src/react-test-renderer/component/test/web.ts": {
-    "typeErrors": 49,
+    "typeErrors": 46,
     "staticErrors": 0,
     "runTimeErrors": 0,
     "prompt": "aider --model deepseek/deepseek-chat --load testeranto/reactTests/reports/web/src/react-test-renderer/component/test/web/prompt.txt",
     "failingFeatures": {}
   },
   "src/react-test-renderer/component/test/pure.ts": {
-    "typeErrors": 49,
+    "typeErrors": 46,
     "staticErrors": 0,
     "runTimeErrors": 0,
     "prompt": "aider --model deepseek/deepseek-chat --load testeranto/reactTests/reports/pure/src/react-test-renderer/component/test/pure/prompt.txt",
     "failingFeatures": {}
   },
   "src/react-dom/component/test/web.ts": {
-    "typeErrors": 53,
+    "typeErrors": 51,
     "staticErrors": 3,
     "runTimeErrors": 0,
     "prompt": "aider --model deepseek/deepseek-chat --load testeranto/reactTests/reports/web/src/react-dom/component/test/web/prompt.txt",

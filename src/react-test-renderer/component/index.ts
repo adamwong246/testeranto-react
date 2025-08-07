@@ -22,9 +22,6 @@ export const adapter: ITestAdapter<I> = {
     let renderer: ReactTestRenderer;
     try {
       const props = getProps();
-      // console.log('[DEBUG] Mounting component:', CComponent.toString());
-      console.log('[DEBUG] With props:', props);
-
       if (!CComponent || typeof CComponent !== 'function') {
         throw new Error(`Invalid component - expected React component but got: ${typeof CComponent}`);
       }
@@ -59,11 +56,6 @@ export const adapter: ITestAdapter<I> = {
         throw new Error('Component unmounted immediately after creation');
       }
 
-      console.log('[DEBUG] Component mounted successfully:', {
-        rootType: renderer.root.type,
-        children: renderer.root.children
-      });
-      
       return renderer;
     } catch (error) {
       console.error('Mounting error:', {
@@ -83,11 +75,6 @@ export const adapter: ITestAdapter<I> = {
       if (!renderer?.root) {
         throw new Error('Renderer is not mounted before When step');
       }
-
-      console.log('[DEBUG] Before When step:', {
-        rootExists: !!renderer.root,
-        tree: renderer.toJSON()
-      });
 
       await act(async () => {
         try {
@@ -126,11 +113,6 @@ export const adapter: ITestAdapter<I> = {
         });
         throw new Error('Renderer unmounted before Then step');
       }
-
-      console.log('[DEBUG] Before Then step:', {
-        rootExists: !!renderer.root,
-        tree: renderer.toJSON()
-      });
 
       const result = await act(async () => {
         try {

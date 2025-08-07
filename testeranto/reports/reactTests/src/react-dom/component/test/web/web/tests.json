@@ -8,21 +8,84 @@
       "thens": [
         {
           "name": "ThePropsIs: [object Object]",
-          "error": "AssertionError [ERR_ASSERTION]: Expected values to be loosely deep-equal:\n\n{ children: [] }\n\nshould equal\n\n{ foo: 'bar', children: [] }",
+          "error": "AssertionError [ERR_ASSERTION]: Expected values to be loosely deep-equal:\n\n{ foo: 'bar' }\n\nshould equal\n\n{ foo: 'bar', children: [] }\n    at Then.thenCB (file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/src/react-dom/component/test/web.mjs?cacheBust=1754595525303:21325:17)\n    at async file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/chunk-7IJKQFYD.mjs:5928:18\n    at async Then.butThen (file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/chunk-7IJKQFYD.mjs:6252:18)\n    at async Given.give (file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/chunk-7IJKQFYD.mjs:5826:19)\n    at async TesterantoCore.constructor.run (file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/chunk-7IJKQFYD.mjs:6175:20)\n    at async file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/chunk-7IJKQFYD.mjs:5969:19\n    at async Object.receiveTestResourceConfig (file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/chunk-7IJKQFYD.mjs:5995:29)\n    at async WebTesteranto.receiveTestResourceConfig (file:///Users/adam/Code/testeranto-react/testeranto/bundles/web/reactTests/chunk-7IJKQFYD.mjs:6276:12)\n    at async pptr:evaluate;file%3A%2F%2F%2FUsers%2Fadam%2FCode%2Ftesteranto%2Fdist%2Fprebuild%2Frun.mjs%3A1343%3A20:4:12",
           "artifacts": [
-            "suite-0/given-initial-state/then-0/butThen/pleaseWork.png"
+            "suite-0/given-initial-state/then-0/butThen/props.png"
+          ]
+        },
+        {
+          "name": "TheStatusIs: [object Object]",
+          "error": false,
+          "artifacts": [
+            "suite-0/given-initial-state/then-1/butThen/status.png"
           ]
         }
       ],
       "error": null,
       "features": [
-        "Component should initialize with correct state"
+        "Component should initialize with status count zero and some props"
+      ],
+      "artifacts": []
+    },
+    {
+      "key": "button-click",
+      "name": "AnEmptyState",
+      "whens": [
+        {
+          "name": "IClickTheButton: ",
+          "error": null,
+          "artifacts": [
+            "suite-0/given-button-click/when/0/andWhen/IClickTheButton.png"
+          ]
+        }
+      ],
+      "thens": [
+        {
+          "name": "TheStatusIs: [object Object]",
+          "error": false,
+          "artifacts": [
+            "suite-0/given-button-click/then-0/butThen/status.png"
+          ]
+        }
+      ],
+      "error": null,
+      "features": [
+        "Clicking button should increment count"
+      ],
+      "artifacts": []
+    },
+    {
+      "key": "header-click",
+      "name": "AnEmptyState",
+      "whens": [
+        {
+          "name": "IClickTheHeader: ",
+          "error": null,
+          "artifacts": [
+            "suite-0/given-header-click/when/0/andWhen/IClickTheHeader.png"
+          ]
+        }
+      ],
+      "thens": [
+        {
+          "name": "TheStatusIs: [object Object]",
+          "error": false,
+          "artifacts": [
+            "suite-0/given-header-click/then-0/butThen/status.png"
+          ]
+        }
+      ],
+      "error": null,
+      "features": [
+        "Clicking header should not change state"
       ],
       "artifacts": []
     }
   ],
   "fails": 0,
   "features": [
-    "Component should initialize with correct state"
+    "Component should initialize with status count zero and some props",
+    "Clicking button should increment count",
+    "Clicking header should not change state"
   ]
 }

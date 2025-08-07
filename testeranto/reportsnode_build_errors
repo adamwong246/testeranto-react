@@ -2,18 +2,10 @@
   "errors": [
     {
       "id": "",
-      "location": {
-        "column": 6,
-        "file": "../testeranto/src/lib/abstractBase.ts",
-        "length": 1,
-        "line": 234,
-        "lineText": "      );",
-        "namespace": "",
-        "suggestion": ""
-      },
+      "location": null,
       "notes": [],
       "pluginName": "",
-      "text": "Unexpected \")\""
+      "text": "Could not resolve \"./node_modules/testeranto/dist/cjs-shim.js\""
     }
   ],
   "warnings": []
