@@ -1,6 +1,6 @@
 import { createElement } from "react";
 
-import { Ibdd_in, IPartialInterface } from "../../../Types";
+import { Ibdd_in, ITestAdapter } from "testeranto/src/CoreTypes";
 
 import { IInput, ISelection, IStore, IWhenShape, IThenShape } from ".";
 
@@ -16,9 +16,9 @@ export type I = Ibdd_in<
   IThenShape
 >;
 
-export const testInterfacer = (
+export const adapter = (
   testInput: I["iinput"]
-): IPartialInterface<I> => {
+): ITestAdapter<I> => {
   return {
     beforeAll: async (prototype, artificer) => {
       return await new Promise((resolve, rej) => {

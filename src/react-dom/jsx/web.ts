@@ -1,10 +1,10 @@
-import Testeranto from "../../../Web.js";
-import { ITestImplementation, ITestSpecification, OT } from "../../../Types";
+import Testeranto from "testeranto/src/Web";
+import { ITestImplementation, ITestSpecification, Ibdd_out } from "testeranto/src/CoreTypes";
 
 import type { IInput } from "./index";
-import { I, testInterfacer } from "./dynamic.js";
+import { I, adapter } from "./dynamic.js";
 
-export default <O extends OT, M>(
+export default <O extends Ibdd_out, M>(
   testImplementations: ITestImplementation<I, O, M>,
   testSpecifications: ITestSpecification<I, O>,
   testInput: IInput
@@ -13,14 +13,14 @@ export default <O extends OT, M>(
     testInput,
     testSpecifications,
     testImplementations,
-    testInterfacer(testInput)
+    adapter(testInput)
   );
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const rootElement = document.getElementById("root");
-    if (rootElement) {
-    }
-  });
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const rootElement = document.getElementById("root");
+  //   // if (rootElement) {
+  //   // }
+  // });
 
   return t;
 };

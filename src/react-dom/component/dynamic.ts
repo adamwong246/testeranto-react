@@ -64,7 +64,7 @@ export const adapter: (testInput: IInput) => ITestAdapter<I> = (testInput) => {
         
         return { htmlElement };
       } catch (err) {
-        console.error("beforeAll failed:", err);
+        // console.error("beforeAll failed:", err);
         throw err;
       }
     },
@@ -75,11 +75,11 @@ export const adapter: (testInput: IInput) => ITestAdapter<I> = (testInput) => {
       initialValues,
       pm
     ) => {
-      console.log("BEFORE EACH");
+
       const { htmlElement } = subject;
 
       const domRoot = ReactDom.createRoot(htmlElement);
-      console.log("Created React root");
+
       
       return new Promise((resolve, rej) => {
         try {
@@ -91,7 +91,7 @@ export const adapter: (testInput: IInput) => ITestAdapter<I> = (testInput) => {
               ...initValues,
               subject: testInput,
               done: (reactElement) => {
-                console.log("Component mounted successfully");
+
                 resolve({
                   htmlElement,
                   reactElement,

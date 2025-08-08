@@ -1,10 +1,10 @@
-import Testeranto from "../../../Pure.js";
+import Testeranto from "testeranto/src/Pure";
 
-import { ITestImplementation, ITestSpecification, OT } from "../../../Types";
+import { ITestImplementation, ITestSpecification, Ibdd_out } from "testeranto/src/CoreTypes.js";
 
-import { I, testInterface } from "./static.js";
+import { I, adapter } from "./static.js";
 
-export default <O extends OT, M>(
+export default <O extends Ibdd_out, M>(
   testImplementations: ITestImplementation<I, O, M>,
   testSpecifications: ITestSpecification<I, O>,
   testInput: I["iinput"]
@@ -13,6 +13,6 @@ export default <O extends OT, M>(
     testInput,
     testSpecifications,
     testImplementations,
-    testInterface
+    adapter
   );
 };

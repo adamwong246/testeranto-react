@@ -1,11 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Ibdd_in, ITestAdapter } from "testeranto/src/CoreTypes";
+import { IPM } from "testeranto/src/lib/types";
+
 import { createElement, useEffect, useRef } from "react";
 import React from "react";
 import ReactDom from "react-dom/client";
 
-import { Ibdd_in, IPartialInterface } from "../../../Types";
-
 import { IInput, ISelection, IStore } from ".";
-import { IPM } from "../../../lib/types";
 
 export type I = Ibdd_in<
   IInput,
@@ -32,7 +34,7 @@ const TesterantoComponent = ({
   return React.createElement("div", { ref: myContainer }, innerComp());
 };
 
-export const testInterface: IPartialInterface<I> = {
+export const adapter: ITestAdapter<I> = {
   beforeAll: async (reactElement, itr): Promise<any> => {
     return await new Promise((resolve, rej) => {
       const htmlElement = document.getElementById("root");
@@ -84,4 +86,7 @@ export const testInterface: IPartialInterface<I> = {
       resolve({});
     });
   },
+  assertThis: function (x: (s: HTMLElement, p: IPM) => any) {
+    throw new Error("Function not implemented.");
+  }
 };
