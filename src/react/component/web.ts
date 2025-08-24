@@ -1,9 +1,9 @@
-import Testeranto from "../../../Web.js";
-import { ITestImplementation, ITestSpecification, OT } from "../../../Types";
+import Testeranto from "testeranto/src/Web";
+import { ITestImplementation, ITestSpecification, Ibdd_out } from "Testeranto/src/CoreTypes";
 
 import { reactInterfacer, I } from "./index.js";
 
-export default <O extends OT, M>(
+export default <O extends Ibdd_out, M>(
   testImplementations: ITestImplementation<I, O, M>,
   testSpecifications: ITestSpecification<I, O>,
   testInput: I["iinput"]

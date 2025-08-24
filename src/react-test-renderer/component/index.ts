@@ -88,7 +88,7 @@ export const adapter: ITestAdapter<I> = {
       if (!renderer.root) {
         console.error('After When step - renderer state:', {
           mounted: !!renderer,
-          rootExists: !!renderer?.root,
+          rootExists: !!renderer?.roIbdd_out_any
           lastOutput: renderer?.toJSON()
         });
         throw new Error('Renderer unmounted during When step');

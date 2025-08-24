@@ -3,7 +3,7 @@ import {
   Ibdd_out,
   ITestImplementation,
   ITestSpecification,
-} from "../../../Types.js";
+} from "Testeranto/src/CoreTypes.js";
 
 import { I, IInput, testInterface } from "./index.js";
 

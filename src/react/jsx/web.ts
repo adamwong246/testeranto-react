@@ -1,19 +1,20 @@
-import Testeranto from "../../../Web.js";
+/* eslint-disable @typescript-eslint/no-empty-object-type */
+import Testeranto from "testeranto/src/Web";
 
 import {
-  IPartialInterface,
+  ITestAdapter,
   ITestImplementation,
   ITestSpecification,
-  OT,
-} from "../../../Types";
+  Ibdd_out_any
+} from "Testeranto/src/CoreTypes";
 
 import { testInterface as baseInterface, I } from "./index.js";
 
-export default <O extends OT, M = {}>(
+export default <O extends Ibdd_out_any, M = {}>(
   testImplementations: ITestImplementation<I, O, M>,
   testSpecifications: ITestSpecification<I, O>,
   testInput: I["iinput"],
-  testInterface: IPartialInterface<I> = baseInterface
+  testInterface: ITestAdapter<I> = baseInterface
 ) => {
   return Testeranto<I, O, M>(
     testInput,

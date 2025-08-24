@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { CElement } from "react";
 import React from "react";
 
-import { Ibdd_in, IPartialInterface } from "../../../Types";
+import { Ibdd_in, ITestAdapter } from "Testeranto/src/CoreTypes";
 
 export type I = Ibdd_in<
   () => JSX.Element,
@@ -13,7 +15,7 @@ export type I = Ibdd_in<
   any
 >;
 
-export const testInterface: IPartialInterface<any> = {
+export const testInterface: ITestAdapter<any> = {
   andWhen: async (s, whenCB) => {
     await whenCB(s());
     return new Promise((resolve, rej) => {

@@ -1,29 +1,23 @@
-import test from "../../../Web.js";
+import test from "testeranto/src/Web";
 
 import {
-  Ibdd_out,
+  Ibdd_out_any,
   ITestImplementation,
   ITestSpecification,
-} from "../../../Types.js";
+} from "Testeranto/src/CoreTypes.js";
 
 import { I, IInput, testInterface } from "./index.js";
 
 export default <
   II extends I,
-  O extends Ibdd_out<
-    Record<string, any>,
-    Record<string, any>,
-    Record<string, any>,
-    Record<string, any>,
-    Record<string, any>
-  >
+  O extends Ibdd_out_any
 >(
   testImplementations: ITestImplementation<II, O>,
   testSpecifications: ITestSpecification<II, O>,
   testInput: IInput,
   testInterface2 = testInterface
 ) => {
-  return test<I, O>(
+  return test<I, O, unknown>(
     testInput,
     testSpecifications,
     testImplementations,

@@ -89,8 +89,8 @@ import { assert } from "chai";
 //     console.log('Component mounted successfully');
     
 //     return {
-//       domRoot: root,
-//       htmlElement: domRoot,
+//       domRoot: roIbdd_out_any
+//       htmlElement: domRoot
 //       reactElement
 //     };
 //   }

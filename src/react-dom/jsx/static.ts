@@ -52,7 +52,7 @@ export const adapter: ITestAdapter<I> = {
                 resolve({
                   htmlElement,
                   reactElement,
-                  domRoot,
+                  domRoot
                 });
               },
             },

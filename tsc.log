@@ -1,0 +1,4 @@
+yarn run v1.22.22
+$ /Users/adam/Code/testeranto-react/node_modules/.bin/tsc --noEmit
+src/react-test-renderer/component/index.ts(92,11): error TS1005: ',' expected.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

@@ -95,7 +95,7 @@ export const adapter: (testInput: IInput) => ITestAdapter<I> = (testInput) => {
                 resolve({
                   htmlElement,
                   reactElement,
-                  domRoot,
+                  domRoot
                 });
               },
             },

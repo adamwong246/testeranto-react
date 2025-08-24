@@ -1,7 +1,7 @@
 import React from "react";
 import renderer, { act, ReactTestRenderer } from "react-test-renderer";
 
-import { Ibdd_in, IPartialInterface } from "../../../Types";
+import { Ibdd_in, ITestAdapter } from "Testeranto/src/CoreTypes";
 
 export type IWhenShape = any;
 export type IThenShape = void;
@@ -21,7 +21,7 @@ export type I = Ibdd_in<
   IThenShape
 >;
 
-export const testInterface: IPartialInterface<I> = {
+export const testInterface: ITestAdapter<I> = {
   butThen: async function (s: IStore, thenCB): Promise<ISelection> {
     return thenCB(s);
   },

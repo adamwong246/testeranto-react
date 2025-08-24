@@ -1,4 +1,4 @@
-import { Ibdd_in, Ibdd_out } from "../../../Types";
+import { Ibdd_in, Ibdd_out } from "Testeranto/src/CoreTypes";
 import test from "../../../Web";
 
 import { ITestImpl, ITestSpec } from "../../react/jsx";

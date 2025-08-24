@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React from "react";
 
-import { Ibdd_in, IPartialInterface } from "../../../Types";
+import { Ibdd_in, ITestAdapter } from "Testeranto/src/CoreTypes";
 
 export type I = Ibdd_in<
   typeof React.Component,
@@ -14,7 +17,7 @@ export type I = Ibdd_in<
 
 export const reactInterfacer = (
   testInput: I["iinput"]
-): IPartialInterface<I> => {
+): ITestAdapter<I> => {
   return {
     beforeEach: async () => {
       return new Promise((resolve, rej) => {

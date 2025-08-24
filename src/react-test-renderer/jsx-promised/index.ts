@@ -5,7 +5,7 @@ import {
   Ibdd_out,
   ITestImplementation,
   ITestSpecification,
-} from "../../../Types";
+} from "Testeranto/src/CoreTypes";
 
 export type IWhenShape = any;
 export type IThenShape = any;

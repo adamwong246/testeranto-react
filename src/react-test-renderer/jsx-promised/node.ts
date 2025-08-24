@@ -1,5 +1,5 @@
-import test from "../../../Node";
-import { Ibdd_in, Ibdd_out } from "../../../Types";
+import test from "testeranto/src/Node";
+import { Ibdd_in, Ibdd_out } from "Testeranto/src/CoreTypes";
 
 import { ITestImpl, ITestSpec } from "../../react/jsx";
 

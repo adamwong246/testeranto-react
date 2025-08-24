@@ -1,6 +1,6 @@
 {
   "name": "testeranto-react",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "testeranto + react, react-dom, and react-test-renderer",
   "repository": "git@github.com:adamwong246/testeranto-react.git",
   "author": "adam wong <adamwong246@gmail.com>",

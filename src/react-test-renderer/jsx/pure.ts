@@ -1,9 +1,9 @@
-import test from "../../../Pure.js";
+import test from "Testeranto/src/Pure";
 import {
   Ibdd_out,
   ITestImplementation,
   ITestSpecification,
-} from "../../../Types.js";
+} from "Testeranto/src/CoreTypes.js";
 
 import { I, IInput, testInterface } from "./index.js";
 

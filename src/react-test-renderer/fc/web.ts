@@ -6,8 +6,8 @@ import {
   ITestImplementation,
   Ibdd_in,
   Ibdd_out,
-} from "../../../Types";
-import test from "../../../Web.js";
+} from "Testeranto/src/CoreTypes";
+import test from "testeranto/src/Web";
 
 export type IInput = React.FC;
 export type IWhenShape = unknown;
